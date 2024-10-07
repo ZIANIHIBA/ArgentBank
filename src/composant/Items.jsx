@@ -1,3 +1,5 @@
+
+import "@/style/main.css";
 import chatIcon from '@/assets/icon-chat.png';
 import moneyIcon from '@/assets/icon-money.png';
 import securityIcon from '@/assets/icon-security.png';
@@ -24,12 +26,13 @@ export default function Items(){
     ]
 
     return (
-        <div>
+        <div className="features">
+           <h2 className="sr-only">Features</h2>
           {features.map((element, index) => (
             <div  className="feature-item" key={index}>
-              <img src={element.image} alt={element.title} />
-              <h3>{element.title}</h3>
-              <p>{element.description}</p>
+              <img className="feature-icon"src={element.image} alt={element.title} />
+              <h3 className='"feature-item-title"'>{element.title}</h3>
+              <p >{element.description}</p>
             </div>
           ))}
         </div>

@@ -1,3 +1,9 @@
+   
+
+  const initialState={
+    
+  } 
+
 const reducer=()=>{
 
 }

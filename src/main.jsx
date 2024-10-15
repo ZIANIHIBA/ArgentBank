@@ -5,8 +5,8 @@ import {Provider} from 'react-redux';
 //import { legacy_createStore } from 'redux'
 //import reducer from './config/reducer'
 import App from './App.jsx'
-import './index.css'
-import{store} from "./config/store"
+import './index.css';
+import{store} from "./config/store";
 
 
 createRoot(document.getElementById('root')).render(

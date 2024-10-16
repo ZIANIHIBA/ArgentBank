@@ -14,7 +14,7 @@
      function Header(){
       // const[singin,setSingin]=useState()
        const dispatch = useDispatch();
-       const isLogged = useSelector(state => state.login.isLogged);
+       const isLogged = useSelector(state => state.loginReducer.isLogged);
       //const token = useSelector((state) => state.login.token);
     //  const userName = useSelector((state) => state.userReducer.userName)
    const handeLgout=()=>{

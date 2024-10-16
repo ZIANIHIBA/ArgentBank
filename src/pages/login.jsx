@@ -1,5 +1,5 @@
 //import { useSelector, useDispatch } from "react-redux";
-import Form from "../composant/Form";
+import Form from "@/composant/Form";
 export default function Login() {
 
   return (

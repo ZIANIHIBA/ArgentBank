@@ -7,6 +7,7 @@ export const getProfile = createAsyncThunk("getProfile", async ({ token }) => {
         'Authorization': 'Bearer ' + token,
         'Content-Type': 'application/json'
     }
+
   });
   const payload = response.data.body;
   return payload;
@@ -21,4 +22,5 @@ export const updateProfile = createAsyncThunk("updateProfile", async ({ token, u
   });
   const payload = response.data.body;
   return payload;
+
 });

@@ -23,10 +23,10 @@ export default function Form() {
   }
 
   return (
-    <>
+   <>
     <form onSubmit={handleSubmit}>
       <div className="input-wrapper">
-        <label htmlFor="username">Username</label><input type="text" id="username" onChange={({target}) => setUsername(target.value)} />
+        <label htmlFor="userName">Username</label><input type="text" id="userName" onChange={({target}) => setUsername(target.value)} />
       </div>
       <div className="input-wrapper">
         <label htmlFor="password">Password</label><input type="password" id="password" onChange={({target}) => setPassword(target.value)} />

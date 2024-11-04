@@ -1,6 +1,6 @@
 //import { useSelector, useDispatch } from "react-redux";
 import Form from "@/composant/Form";
-
+import "@/style/main.css";
 import { useEffect } from "react";
 
 import { useSelector } from "react-redux";
@@ -16,12 +16,12 @@ export default function Login() {
       }, [isLogged, navigate]);
 
   return (
-    <div className="main bg-dark">
+    <main className="main bg-dark">
       <section className="sign-in-content">
         <i className="fa fa-user-circle sign-in-icon"></i>
         <h1>Sign In</h1>
        <Form/>
       </section>
-    </div>
+    </main>
   );
 }

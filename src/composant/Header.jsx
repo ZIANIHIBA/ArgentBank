@@ -14,6 +14,7 @@
        const dispatch = useDispatch();
        const isLogged = useSelector(state => state.loginReducer.isLogged);
       const token = useSelector((state) => state.loginReducer.token);
+      const firstName=useSelector((state)=>state.userReducer.firstName)
     const userName = useSelector((state) => state.userReducer.userName)
    const handeLgout=()=>{
   dispatch (logout());
@@ -38,8 +39,8 @@ useEffect(() => {
       <div>
         <NavLink  className="main-nav-item" to="/Login" onClick={handeLgout} >{ 
     isLogged?
-      <><i className="fa fa-user-circle"></i>Sign out</>
-      :<><i className="fa fa-user-circle"></i>Sign in</>
+      (<>{firstName} <i className="fa fa-sign-out"></i>Sign Out</>) 
+    : (<><i className="fa fa-user-circle"></i>Sign-in</>) 
     }
       </NavLink>
       </div>

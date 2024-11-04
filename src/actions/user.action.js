@@ -1,16 +1,21 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-export const getProfile = createAsyncThunk("getProfile", async ({ token }) => {
-  const response = await axios.post('http://localhost:3001/api/v1/user/profile', {}, {
+export const getProfile = createAsyncThunk("getProfile", async () => {
+  const token=localStorage.getItem("token")
+  console.log(getProfile)
+  const response = await axios.get('http://localhost:3001/api/v1/user/profile',{
     headers: {
-        'Authorization': 'Bearer ' + token,
+        'Authorization': "Bearer "+ token,
         'Content-Type': 'application/json'
     }
 
   });
   const payload = response.data.body;
+  console.log(payload)
+
   return payload;
+  
 });
 
 export const updateProfile = createAsyncThunk("updateProfile", async ({ token, userName }) => {

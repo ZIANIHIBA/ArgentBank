@@ -7,10 +7,11 @@ export const login = createAsyncThunk("login", async ({ email, password, remembe
       password
     
     });
+    console.log(response,"logiiiin")
     const payload = {
       ...response.data.body,
       remember
-  
     }
+    console.log(payload)
     return payload;
   });

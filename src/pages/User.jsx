@@ -4,9 +4,9 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { useNavigate } from "react-router-dom";
 
-import { updateProfile } from "../actions/user.action";
+import { updateProfile} from "../actions/user.action";
 import "@/style/main.css";
-//import Account from "@/composant/Account";
+import Account from "@/composant/Account";
 //import accountData from '../../data/account.json';
 
 
@@ -19,6 +19,7 @@ export default function User() {
     const firstName = useSelector(state => state.userReducer.firstName)
     const lastName = useSelector(state => state.userReducer.lastName)
     const userName = useSelector(state => state.userReducer.userName)
+    //console.log (userName)
     const token = useSelector((state) => state.loginReducer.token);
     const [newUserName, setNewUserName] = useState(userName)
 
@@ -26,11 +27,13 @@ export default function User() {
         event.preventDefault();
         try {
             dispatch(updateProfile({ token, userName: newUserName }));
+            console.log(userName)
             hide("edit");
           } catch (error) {
             console.error(error.message);
           }
           return false;
+         
     }
 
     function hide(name){
@@ -70,7 +73,7 @@ export default function User() {
                         <h1>Edit user info</h1>
                         <div id="header-inputs">
                             <label htmlFor="username"> Username
-                                <input type="text" id="username" value={ newUserName || userName } onChange={ event => setNewUserName(event.target.value)}/>
+                                <input type="text" id="username" value={ newUserName  } onChange={ event => setNewUserName(event.target.value)}/>
                             </label>
                             <label htmlFor="firstName"> First name
                                 <input type="text" id="firstName" value={firstName} readOnly />
@@ -85,7 +88,7 @@ export default function User() {
                         </div>
                     </div>
                 </form>
-            {/* <Account/> */}
+            <Account/>
             </main>
 </div>)
  }

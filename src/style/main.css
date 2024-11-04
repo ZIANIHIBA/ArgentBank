@@ -12,8 +12,12 @@ html {
     flex-direction: column;
     min-height: 100vh;
   }
+  .tain{
+    flex:1;
+  }
   
   .main {
+    display: flex;
     flex: 1;
   }
 .html {
@@ -30,10 +34,13 @@ html {
     flex-direction: column;
     min-height: 100vh;
   }
-  
-  .main {
-    flex: 1;
+  i{
+    margin-left: 10px;
+    margin-right: 6px;
   }
+  
+  
+  
   /* nav */
   .main-nav {
     display: flex;
@@ -158,31 +165,30 @@ html {
   }
   
 /* Login */
+
+.sign-in-icon {
+  font-size: 5rem;
+}
+
 .bg-dark {
     background-color: #12002b;
   }
    
   
-.sign-in-content {
-    box-sizing: border-box;
-    background-color: white;
-    width: 300px;
-   
-    margin: 0 auto;
-    margin-top: 3rem;
-    padding: 2rem;
-  }
-.sign-in-content {
+
+  .sign-in-content {
     box-sizing: border-box;
     background-color: white;
     width: 300px;
     margin: 0 auto;
     margin-top: 3rem;
+    margin-bottom: 5rem;
     padding: 2rem;
   }
   
+  
   .sign-in-icon {
-    font-size: 5rem;
+    font-size: 2rem;
   }
   
   .input-remember {

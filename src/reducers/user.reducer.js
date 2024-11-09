@@ -22,14 +22,14 @@ export const user = createSlice({
       }),
     },
     extraReducers: (builder) => {
-      builder.addCase(getProfile.pending, (state, action) => initialState);
+      builder.addCase(getProfile.pending, () => initialState);
       builder.addCase(getProfile.fulfilled, (state, action) => action.payload);
-      builder.addCase(getProfile.rejected, (state, action) => {
+      builder.addCase(getProfile.rejected, () => {
         console.error("Erreur lors de la récupération du profil de l'utilisateur.")
       });
-      builder.addCase(updateProfile.pending, (state, action) => initialState);
+      builder.addCase(updateProfile.pending, () => initialState);
       builder.addCase(updateProfile.fulfilled, (state, action) => action.payload);
-      builder.addCase(updateProfile.rejected, (state, action) => {
+      builder.addCase(updateProfile.rejected, () => {
         console.error("Erreur lors de la modification du profil de l'utilisateur.")
       });
     }

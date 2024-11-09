@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { updateProfile} from "../actions/user.action";
 import "@/style/main.css";
 import Account from "@/composant/Account";
-//import accountData from '../../data/account.json';
+
 
 
 
@@ -19,7 +19,6 @@ export default function User() {
     const firstName = useSelector(state => state.userReducer.firstName)
     const lastName = useSelector(state => state.userReducer.lastName)
     const userName = useSelector(state => state.userReducer.userName)
-    //console.log (userName)
     const token = useSelector((state) => state.loginReducer.token);
     const [newUserName, setNewUserName] = useState(userName)
 

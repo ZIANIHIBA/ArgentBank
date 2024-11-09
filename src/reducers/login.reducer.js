@@ -58,7 +58,7 @@ const slice = createSlice({
   name: "token",
   initialState,
   reducers: {
-    logout (state, action) {
+    logout (state) {
       state.token = null;
       state.isLogged = false;
       localStorage.removeItem("token");

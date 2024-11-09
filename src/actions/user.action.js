@@ -3,7 +3,6 @@ import axios from "axios";
 
 export const getProfile = createAsyncThunk("getProfile", async () => {
   const token=localStorage.getItem("token")
-  console.log(getProfile)
   const response = await axios.get('http://localhost:3001/api/v1/user/profile',{
     headers: {
         'Authorization': "Bearer "+ token,

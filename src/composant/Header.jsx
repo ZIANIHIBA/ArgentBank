@@ -7,10 +7,9 @@
   import { getProfile } from  '../actions/user.action';
  import { useEffect } from "react";
 
-
  
      function Header(){
-      // const[singin,setSingin]=useState()
+     
        const dispatch = useDispatch();
        const isLogged = useSelector(state => state.loginReducer.isLogged);
       const token = useSelector((state) => state.loginReducer.token);

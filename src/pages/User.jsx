@@ -55,7 +55,7 @@ export default function User() {
     }
 
     useEffect(() => {
-        !isLogged && navigate("/sign-in");
+        !isLogged && navigate("/login");
     }, [isLogged, navigate]);
 
     return (

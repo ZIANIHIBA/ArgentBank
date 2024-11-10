@@ -38,7 +38,7 @@ useEffect(() => {
       <div>
         <NavLink  className="main-nav-item" to="/Login" onClick={handeLgout} >{ 
     isLogged?
-      (<>{firstName} <i className="fa fa-sign-out"></i>Sign Out</>) 
+      (<>{userName} <i className="fa fa-sign-out"></i>Sign Out</>) 
     : (<><i className="fa fa-user-circle"></i>Sign-in</>) 
     }
       </NavLink>

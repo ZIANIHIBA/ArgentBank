@@ -16,7 +16,7 @@ paths:
             tags:
                 - Transactions module
             summary: Finds all transactions for the current month
-            description: API for fetching have all the transactions of the current month 
+            description: API for fetching have all the transactions  
             consumes:
                 - 'application/json'
             produces:

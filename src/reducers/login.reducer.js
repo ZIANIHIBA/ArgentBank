@@ -7,7 +7,6 @@ const initialState = {
   loading: false,
   error: null,
 };
-
 const slice = createSlice({
   name: "token",
   initialState,
@@ -16,8 +15,6 @@ const slice = createSlice({
       state.token = null;
       state.isLogged = false;
       localStorage.removeItem("token");
-      // rénitialise la valeur de userName après une déconnexion
-      //state.userReducer.userName = "";
     },
   },
   extraReducers: (builder) => {
